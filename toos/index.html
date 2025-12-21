@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="HZY HZY1618yzh HZY1618yzh的个人主页">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>主页-HZY</title>
+    <title>实用工具-HZY</title>
     <script>
-        document.title = 'Loding... 主页-HZY';
+        document.title = 'Loding... 实用工具-HZY';
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="https://cdn.luogu.com.cn/upload/usericon/1394471.png" type="image/png">
@@ -97,58 +97,33 @@
             margin: 10px 15px;
         }
 
-        .link-card {
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 15px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            transition: transform 0.3s;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .link-card a {
-            position: relative;
-            z-index: 1;
-            color: black !important;
-            font-weight: bold;
+        .toos-item {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            text-decoration: none;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
         }
 
-        .link-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        .toos-item:hover {
+            transform: translateX(5px);
         }
 
-        .center {
-            text-align: center;
+        .toos-link {
+            background: #4a6cf7;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: background 0.3s;
         }
 
-        .pro {
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 15px;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            position: relative;
-            z-index: 1;
-            color: black !important;
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-        }
-
-        .pro a {
-            position: relative;
-            z-index: 1;
-            color: black !important;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            text-decoration: none;
+        .toos-link:hover {
+            background: #3b5be3;
         }
     </style>
 </head>
@@ -180,28 +155,35 @@
         </ul>
     </nav>
     <main style="padding: 20px;">
-        <h1>欢迎来到HZY的个人主页！</h1>
-        <div class="link-card">
-            <h2>宣传/广告</h2>
-            <div class="pro"><span id="jinrishici-sentence">正在加载今日诗词....</span>
-                <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-            </div>
-            <div class="pro"><a href="https://www.luogu.com.cn/discuss/525529">不可以总司令</a></div>
-            <div class="pro">稻花香里说丰年，听取 WA 声一片 ——辛弃疾 《西江月·夜行黄沙道中》</div>
+        <h1>实用工具</h1>
+        <div class="toos-item">
             <div>
-                <div class="center" id="pro"><button id="seemorepro">查看更多</button></div>
+                <h3>哔站直播爬取</h3>
+                <p>爬取哔站视频，可以防网卡和临时使用</p>
             </div>
+            <a href="https://hzy.us.kg/toos/bzsp" class="toos-link">开始使用</a>
         </div>
-        <div class="link-card">
-            <h2>个人简介</h2>
-            <p>我是HZY，一名热爱编程和算法竞赛的学习者。这个网站展示我的项目和作品。</p>
-        </div>
-        <a href="https://blog.csdn.net/D56795?spm=1000.2115.3001.5343">
-            <div class="link-card">
-                <h2>我的博客</h2>
-                <p>我经常分享编程技巧和开发经验，欢迎阅读我的技术博客文章。</p>
+        <div class="toos-item">
+            <div>
+                <h3>极域杀手</h3>
+                <p>更加放心的使用您的电脑</p>
             </div>
-        </a>
+            <a href="https://hzy.us.kg/toos/eckill" class="toos-link">开始使用</a>
+        </div>
+        <div class="toos-item">
+            <div>
+                <h3>网站（洛谷）爬取</h3>
+                <p>某些情况下的防极域外网限制的工具</p>
+            </div>
+            <a href="https://hzy.us.kg/toos/lgfw" class="toos-link">开始使用</a>
+        </div>
+        <div class="toos-item">
+            <div>
+                <h3>OI-wiki</h3>
+                <p>OI-wiki 是一个针对 OI 算法的网站，此工具可以帮助您在极域控制时访问</p>
+            </div>
+            <a href="https://OI-wiki。hzy.us.kg/" class="toos-link">开始使用</a>
+        </div>
     </main>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -216,10 +198,6 @@
                 });
             });
         });
-        document.getElementById('seemorepro').addEventListener('click', function (e) {
-            e.stopPropagation();
-            document.getElementById('pro').innerHTML = '<div class="pro">绿水青山就是金山银山 ——习近平</div><div class="center"><p>没有更多了</p></div>';
-        });
         function wait(islod, chyt) {
             const interval = setInterval(() => {
                 if (islod()) {
@@ -230,7 +208,7 @@
         }
         wait(
             () => document.readyState === 'complete',
-            '主页-HZY'
+            '实用工具-HZY'
         );
     </script>
 </body>
