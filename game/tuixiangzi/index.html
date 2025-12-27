@@ -255,9 +255,9 @@
     <main style="padding: 20px;">
         <h1>推箱子游戏</h1>
         <div class="link-card special-card">
-            <a href="https://vip.123pan.cn/1828128238/22388431" download>
+            <a href="https://download.hzy.us.kg/%E6%8E%A8%E7%AE%B1%E5%AD%901.4.2%E7%89%88%E4%B8%8B%E8%BD%BD.exe" download>
                 <i class="fas fa-download" style="margin-right: 10px;"></i>
-                立即下载最新版本
+                立即下载最新版本（github慢速版）
             </a>
         </div>
          <div class="link-card">
@@ -293,6 +293,31 @@
                         <td>1.1</td>
                         <td>重写移动方式，只有一个关卡，体验极差</td>
                     </tr>
+                    <tr>
+                        <td><span class="status-badge status-not-supported">暂不支持</span></td>
+                        <td>1.2</td>
+                        <td>增加部分关卡</td>
+                    </tr>
+                    <tr>
+                        <td><span class="status-badge status-not-supported">暂不支持</span></td>
+                        <td>1.3</td>
+                        <td>使用ini文件作为关卡存储，修复部分bug，增加更多关卡</td>
+                    </tr>
+                    <tr>
+                        <td><span class="status-badge status-not-supported">暂不支持</span></td>
+                        <td>1.4</td>
+                        <td>ini文件里添加最终关卡设置</td>
+                    </tr>
+                    <tr>
+                        <td><span class="status-badge status-not-supported">暂不支持</span></td>
+                        <td>1.4.1</td>
+                        <td>重写输出逻辑，没有闪屏。增加关卡</td>
+                    </tr>
+                    <tr>
+                        <td><span class="status-badge status-not-supported"><a href="https://vip.123pan.cn/1828128238/22388431" download>下载地址（123网盘快速版）</a></span></td>
+                        <td>1.4.2</td>
+                        <td>重写读入逻辑</td>
+                    </tr>
                 </tbody>
             </table>
             
@@ -301,16 +326,7 @@
     </main>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const cards = document.querySelectorAll('.link-card');
             const navItems = document.querySelectorAll('.nav-item');
-            cards.forEach(card => {
-                card.addEventListener('click', function () {
-                    const link = this.querySelector('a');
-                    if (link) {
-                        window.location.href = link.href;
-                    }
-                });
-            });
             navItems.forEach(item => {
                 item.setAttribute('tabindex', '0');
                 item.addEventListener('keypress', function (e) {
